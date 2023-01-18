@@ -33,25 +33,6 @@ def add_currencies(currency_list):
         except:
             c = Currency(long_name=currency_name, iso=currency_symbol)
         c.name = currency_name
-        # c.save() #To test out the code, replace this by print(c)
-        print(c)
+        c.save() #To test out the code, replace this by print(c)
     return
 
-
-# from django.http import HttpResponseRedirect
-# from django.urls import reverse
-
-
-# def maintenance(request):
-#     data = dict()
-#     try:
-#         choice = request.GET['selection']
-#         if choice == "currencies":
-#             support_functions.add_currencies(support_functions.get_currency_list())
-#             c_list = Currency.objects.all()
-#             print("Got c_list", len(c_list))
-#             data['currencies'] = c_list
-#             return HttpResponseRedirect(reverse('currencies'))
-#     except:
-#         pass
-#     return render(request, "maintenance.html", context=data)
