@@ -78,14 +78,7 @@ WSGI_APPLICATION = "djangoProject.wsgi.application"
 DATABASES = {
     'default': dj_database_url.config(default='postgresql://postgres:072631jg@localhost:5432/myapp-1n3s',
                                       conn_max_age=600),
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '072631jg',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
+
 }
 
 # Password validation
