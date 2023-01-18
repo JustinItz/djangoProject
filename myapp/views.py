@@ -8,3 +8,7 @@ def home(request):
     data["time_of_day"] = time
     print(time)
     return render(request,"home.html",context=data)
+
+def maintenance(request):
+    data = dict()
+    return render(request, "maintenance.html", context=data)
