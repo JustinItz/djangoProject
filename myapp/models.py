@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -43,3 +43,12 @@ class Holding(models.Model):
         return self.iso.iso + " " + self.value + " " + self.buy_date
     def __str__(self):
         return self.iso.long_name + " " + self.value + " " + self.buy_date
+
+class AccountHolder(models.Model):
+    user=models.OneToOneField(User,on_delete=models.CASCADE)
+    date_of_birth = models.DateField()
+    currencies_visited = models.ManyToManyField(Currency)
+    def __str__(self):
+        return self.user.username
+    def __repr__(self):
+        return self.user.username
