@@ -32,4 +32,5 @@ urlpatterns = [
     path('register', views.register_new_user, name="register_user"),
     path('accounts/', include('django.contrib.auth.urls')),
     path('home',views.home, name='home'),
+    path('map',views.map,name="map"),
 ]
